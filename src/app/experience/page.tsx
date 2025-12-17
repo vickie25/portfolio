@@ -1,6 +1,9 @@
 import { FullScreen } from "@/components/full-screen"
 import { ExperienceTimeline } from "./containers/experience-timeline"
 
+// Enable static generation with revalidation every hour
+export const revalidate = 3600 // 1 hour in seconds
+
 export const metadata = {
   title: "Experience | Kinh Dev",
   description:

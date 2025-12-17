@@ -80,7 +80,6 @@ export const SpotifyPlaylist = () => {
             height="500px"
             allowFullScreen
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
             onLoad={handleIframeLoad}
             onLoadStart={() => console.log("1")}
           ></iframe>

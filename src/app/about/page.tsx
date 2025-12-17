@@ -1,6 +1,9 @@
 import { Metadata } from "next"
 import { ComingSoonPage } from "@/components/layout/coming-soon"
 
+// Enable static generation with revalidation every hour
+export const revalidate = 3600 // 1 hour in seconds
+
 export const metadata: Metadata = {
   title: "About | Kinh Dev",
   description:

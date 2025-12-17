@@ -302,9 +302,9 @@ const KeySkills = () => {
       initial="hidden"
       animate="visible"
     >
-      {skills.map((skill, index) => (
+      {skills.map((skill) => (
         <motion.div
-          key={index}
+          key={skill.name}
           variants={badgeVariants}
           whileHover={{
             scale: 1.1,

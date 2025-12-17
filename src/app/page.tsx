@@ -4,6 +4,9 @@ import { MyInformation } from "@/containers/about-me"
 import { MyUniverse } from "@/containers/my-universe"
 import { PersonalInterests } from "@/containers/personal-interests"
 
+// Enable static generation with revalidation every hour
+export const revalidate = 3600 // 1 hour in seconds
+
 export default function Home() {
   return (
     <div>

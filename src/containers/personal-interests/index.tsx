@@ -27,9 +27,9 @@ export function PersonalInterests() {
   return (
     <>
       <BentoGrid className="w-full mx-auto md:auto-rows-[20rem]">
-        {items.map((item, i) => (
+        {items.map((item) => (
           <BentoGridItem
-            key={i}
+            key={item.title}
             title={item.title}
             description={item.description}
             header={item.header}

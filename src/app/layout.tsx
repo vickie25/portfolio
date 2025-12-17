@@ -11,6 +11,9 @@ const exo2 = Exo_2({
   subsets: ["latin", "vietnamese", "cyrillic"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-exo2",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
@@ -63,7 +66,43 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      itemScope
+      itemType="https://schema.org/WebPage"
+    >
+      <head>
+        {/* Preconnect to external domains for faster loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://pbs.twimg.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://yt3.googleusercontent.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://assets.aceternity.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://voocgavdbpy2gucg.public.blob.vercel-storage.com"
+          crossOrigin="anonymous"
+        />
+        {/* DNS prefetch for critical resources */}
+        <link rel="dns-prefetch" href="https://api.vercel.com" />
+      </head>
       <body
         className={`${exo2.variable} antialiased scroll-smooth w-full max-w-dvw overflow-x-hidden`}
       >

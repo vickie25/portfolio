@@ -270,7 +270,7 @@ If you find a bug, please create an issue with:
 
 ## 👨‍💻 Author
 
-**[Bach Duong Kinh]**
+**[Victor Nyandoro]**
 
 - GitHub: [@kinhdev24](https://github.com/kinhdev24)
 - LinkedIn: [@kinhdev24](https://www.linkedin.com/in/kinhdev24)

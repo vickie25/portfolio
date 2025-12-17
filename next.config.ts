@@ -21,16 +21,11 @@ const nextConfig: NextConfig = {
     ],
     // Enable AVIF format for better compression
     formats: ["image/avif", "image/webp"],
-    // Minimize image size in memory
-    sizes: "100vw",
   },
 
   // Compression and optimization
   compress: true,
   productionBrowserSourceMaps: false,
-
-  // Optimize bundle
-  swcMinify: true,
   
   // Streaming and prefetch optimization
   onDemandEntries: {

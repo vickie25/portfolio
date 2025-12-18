@@ -156,7 +156,7 @@ Edit the following files to customize with your information:
 
 1. **My Social Networks**: `src/data/my-networks.ts`
 2. **Role Titles**: `src/data/role-titles.ts`
-3. **Resume File**: `public/file/kinhbach_resume.ts`
+3. **Resume File**: `public/files/Victor Nyandoro Refurb 1..pdf`
 4. **Experience**: `src/data/experience.tsx`
 5. **Projects**: `src/data/projects.ts`
 6. **Tech Stacks**: `src/data/tech-stack.ts`

@@ -61,6 +61,7 @@ export const SpotifyPlaylist = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={currentTheme}
+          className="mb-3"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
@@ -70,19 +71,21 @@ export const SpotifyPlaylist = () => {
           }}
         >
           <iframe
+            title="Spotify playlist"
             style={{ borderRadius: "12px" }}
             src={`https://open.spotify.com/embed/playlist/${
-              process.env.NEXT_PUBLIC_SPOTIFY_PLAYLIST_ID
+              process.env.NEXT_PUBLIC_SPOTIFY_PLAYLIST_ID ||
+              "4hUXyVTOUbMdkJB4fV0FN4"
             }?utm_source=generator&theme=${
               currentTheme === "dark" ? "0" : "1"
             }`}
             width="100%"
-            height="500px"
-            allowFullScreen
+            height="500"
+            frameBorder={0}
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
             onLoad={handleIframeLoad}
-            onLoadStart={() => console.log("1")}
-          ></iframe>
+          />
         </motion.div>
       </AnimatePresence>
     </div>

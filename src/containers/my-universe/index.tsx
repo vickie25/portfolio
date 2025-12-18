@@ -116,7 +116,7 @@ export function CompareDemo() {
     <div className="w-full border rounded-3xl dark:bg-neutral-900 bg-neutral-100 border-neutral-200 dark:border-neutral-800">
       <Compare
         firstImage="https://voocgavdbpy2gucg.public.blob.vercel-storage.com/portfolio/image%20%283%29-9ohWXR6mPsqfP9GC3OXB6l23pKXqpS.png"
-        secondImage="https://voocgavdbpy2gucg.public.blob.vercel-storage.com/portfolio/image%20%284%29-Z38KH4uoJOoyhY6YDXVDNxRu8uWZUS.png"
+        secondImage="https://6g9mbadywwytxiek.public.blob.vercel-storage.com/NEW/Screenshot%202025-12-18%20173022.png"
         firstImageClassName="object-cover object-left-top"
         secondImageClassname="object-cover object-left-top"
         className="h-[200px] sm:h-[250px] md:h-[400px] lg:h-[500px] w-full"

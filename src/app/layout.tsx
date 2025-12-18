@@ -73,6 +73,8 @@ export default function RootLayout({
       itemType="https://schema.org/WebPage"
     >
       <head>
+        {/* Viewport for responsive design */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

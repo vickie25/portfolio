@@ -68,7 +68,7 @@ export function MyInformation() {
                         Digital Fortress Co., Ltd.
                       </p>
                       <p className="relative z-20 text-sm sm:text-base text-neutral-500 font-medium uppercase">
-                        Frontend Developer
+                        Full Stack Developer
                       </p>
                     </div>
                   </div>

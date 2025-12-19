@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
     optimizeCss: true,
   },
   
+  // Set Turbopack root to silence lockfile warnings
+  turbopack: {
+    root: ".",
+  } as any,
+  
   // Image optimization settings
   images: {
     remotePatterns: [

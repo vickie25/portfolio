@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:cloudflare": "next build && npx @cloudflare/next-on-pages",
+    "postbuild": "npx @cloudflare/next-on-pages || true",
+    "deploy": "npm run build:cloudflare && npx wrangler pages deploy .vercel/output/static",
     "start": "next start",
     "lint": "next lint"
   },
@@ -25,6 +28,7 @@
     "clsx": "^2.1.1",
     "critters": "^0.0.24",
     "lucide-react": "^0.484.0",
+    "@cloudflare/next-on-pages": "^1.15.0",
     "motion": "^12.6.5",
     "next": "^15.5.9",
     "next-themes": "^0.4.6",

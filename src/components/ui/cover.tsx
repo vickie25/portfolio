@@ -19,6 +19,9 @@ export const Cover = ({
 
   const [containerWidth, setContainerWidth] = useState(0)
   const [beamPositions, setBeamPositions] = useState<number[]>([])
+  const [beamParams, setBeamParams] = useState<
+    { duration: number; delay: number; repeatDelay: number }[]
+  >([])
 
   useEffect(() => {
     if (ref.current) {
@@ -31,6 +34,13 @@ export const Cover = ({
         (_, i) => (i + 1) * (height / (numberOfBeams + 1))
       )
       setBeamPositions(positions)
+      // generate stable random timings for beams on the client
+      const params = positions.map(() => ({
+        duration: Math.random() * 2 + 1,
+        delay: Math.random() * 2 + 1,
+        repeatDelay: Math.random() * (2 - 1) + 1,
+      }))
+      setBeamParams(params)
     }
   }, [ref.current])
 
@@ -91,8 +101,9 @@ export const Cover = ({
         <Beam
           key={index}
           hovered={hovered}
-          duration={Math.random() * 2 + 1}
-          delay={Math.random() * 2 + 1}
+          duration={beamParams[index]?.duration}
+          delay={beamParams[index]?.delay}
+          repeatDelay={beamParams[index]?.repeatDelay}
           width={containerWidth}
           style={{
             top: `${position}px`,
@@ -150,12 +161,14 @@ export const Beam = ({
   className,
   delay,
   duration,
+  repeatDelay,
   hovered,
   width = 600,
   ...svgProps
 }: {
   className?: string
   delay?: number
+  repeatDelay?: number
   duration?: number
   hovered?: boolean
   width?: number
@@ -198,8 +211,8 @@ export const Beam = ({
             duration: hovered ? 0.5 : duration ?? 2,
             ease: "linear",
             repeat: Infinity,
-            delay: hovered ? Math.random() * (1 - 0.2) + 0.2 : 0,
-            repeatDelay: hovered ? Math.random() * (2 - 1) + 1 : delay ?? 1,
+            delay: hovered ? delay ?? 0 : 0,
+            repeatDelay: hovered ? repeatDelay ?? (delay ?? 1) : delay ?? 1,
           }}
         >
           <stop stopColor="#2EB9DF" stopOpacity="0" />

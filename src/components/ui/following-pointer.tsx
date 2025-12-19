@@ -83,6 +83,10 @@ export const FollowPointer = ({
     "#ef4444",
     "#eab308",
   ]
+  const [color] = useState(() =>
+    colors[Math.floor(Math.random() * colors.length)]
+  )
+
   return (
     <motion.div
       className="absolute z-50 h-4 w-4 rounded-full"
@@ -118,7 +122,7 @@ export const FollowPointer = ({
       </svg>
       <motion.div
         style={{
-          backgroundColor: colors[Math.floor(Math.random() * colors.length)],
+          backgroundColor: color,
         }}
         initial={{
           scale: 0.5,

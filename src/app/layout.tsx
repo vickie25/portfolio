@@ -104,8 +104,22 @@ export default function RootLayout({
         />
         {/* DNS prefetch for critical resources */}
         <link rel="dns-prefetch" href="https://api.vercel.com" />
+        {/*
+          Cleanup script to remove attributes injected by browser extensions
+          (e.g. Bitwarden) before React hydration runs. This prevents
+          hydration mismatch warnings without disabling the extension.
+          The script is intentionally small, runs early, and observes
+          the DOM for a short period to remove attributes that appear
+          immediately after page load.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `;(function(){try{var prefixes=['bis_','__processed_'];function cleanse(root){if(!root||!root.querySelectorAll) return;var els=root.querySelectorAll('*');for(var i=0;i<els.length;i++){var el=els[i];var attrs=el.getAttributeNames&&el.getAttributeNames()||[];for(var j=0;j<attrs.length;j++){var a=attrs[j];if(!a) continue;for(var p=0;p<prefixes.length;p++){if(a.indexOf(prefixes[p])===0){el.removeAttribute(a);break;}}}}}cleanse(document.documentElement);cleanse(document.body);var observer=new MutationObserver(function(muts){muts.forEach(function(m){if(m.type==='attributes'&&m.target&&m.target.getAttributeNames){var attrs=m.target.getAttributeNames();for(var k=0;k<attrs.length;k++){var an=attrs[k];if(an&& (an.indexOf('__processed_')===0||an.indexOf('bis_')===0)){m.target.removeAttribute(an);}}} if(m.addedNodes&&m.addedNodes.length){for(var n=0;n<m.addedNodes.length;n++){var node=m.addedNodes[n];if(node.nodeType===1&&node.getAttributeNames){var nas=node.getAttributeNames();for(var z=0;z<nas.length;z++){var nna=nas[z];if(nna&&(nna.indexOf('__processed_')===0||nna.indexOf('bis_')===0)){node.removeAttribute(nna);}}}}}}});observer.observe(document.documentElement||document,{attributes:true,subtree:true,childList:true,attributeOldValue:true});setTimeout(function(){try{observer.disconnect();}catch(e){}},5000);}catch(e){console.warn('pre-hydration-cleanse',e);}})();`,
+          }}
+        />
       </head>
       <body
+        suppressHydrationWarning
         className={`${exo2.variable} antialiased scroll-smooth w-full max-w-dvw overflow-x-hidden`}
       >
         <ThemeProvider

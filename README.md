@@ -272,10 +272,10 @@ If you find a bug, please create an issue with:
 
 **[Victor Nyandoro]**
 
-- GitHub: [@kinhdev24](https://github.com/kinhdev24)
-- LinkedIn: [@kinhdev24](https://www.linkedin.com/in/kinhdev24)
-- Email: [kinhdev24@gmail.com](mailto:kinhdev24@gmail.com)
-- Website: [kinhdev.id.vn](https://kinhdev.id.vn)
+- GitHub: [@vickie25](https://github.com/vickie25)
+- LinkedIn: [@victor-nyandoro](https://www.linkedin.com/in/victor-nyandoro-a46671232/)
+- Email: [nyandorovictor3900@gmail.com](mailto:nyandorovictor3900@gmail.com)
+- Website: [portfolio-vick.vercel.app](https://portfolio-vick.vercel.app/)
 
 ## 🙏 Acknowledgments
 

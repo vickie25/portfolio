@@ -65,7 +65,7 @@ export function MyInformation() {
                         Victor Nyandoro
                       </p>
                       <p className="relative z-20 text-sm sm:text-base text-neutral-500 font-medium uppercase">
-                        Digital Fortress Co., Ltd.
+                        APBC africa.
                       </p>
                       <p className="relative z-20 text-sm sm:text-base text-neutral-500 font-medium uppercase">
                         Full Stack Developer
@@ -81,7 +81,7 @@ export function MyInformation() {
                   </h3>
                   <h2 className="text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
                     I thrive on learning, leading, and solving complex
-                    challenges — always reflecting on how each experience
+                    challenges always reflecting on how each experience
                     contributes to personal and team growth.
                   </h2>
                 </div>

@@ -5,23 +5,23 @@ import { ComingSoonPage } from "@/components/layout/coming-soon"
 export const revalidate = 3600 // 1 hour in seconds
 
 export const metadata: Metadata = {
-  title: "About | Kinh Dev",
+  title: "About | Victor Nyandoro",
   description:
-    "Learn more about Kinh Dev - Frontend Developer, JavaScript enthusiast, and tech explorer.",
+    "Learn more about Victor Nyandoro - Full StackDeveloper, JavaScript enthusiast, and tech explorer.",
   keywords: [
-    "Kinh Dev",
-    "About Kinh",
+    "Victor Nyandoro",
+    "About Victor",
     "Frontend Developer",
     "JavaScript",
     "Next.js",
-    "Vietnam Developer",
+    "Full Stack Developer",
   ],
   openGraph: {
-    title: "About | Kinh Dev",
+    title: "About | Victor Nyandoro",
     description:
-      "Discover the story and journey of Kinh Dev in the world of web development.",
-    url: "https://kinhdev.id.vn/about",
-    siteName: "Kinh Dev",
+      "Discover the story and journey of Victor Nyandoro in the world of web development.",
+    url: "https://vickportfolio.vercel.app/about",
+    siteName: "Victor Nyandoro",
     type: "website",
     locale: "en_US",
     images: [
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About | Kinh Dev",
+    title: "About | Victor Nyandoro",
     description:
-      "Learn more about Kinh Dev - Frontend Developer and tech enthusiast.",
-    // images: ["https://kinhdev.id.vn/images/seo/about-og-image.png"],
+      "Learn more about Victor Nyandoro - Frontend Developer and tech enthusiast.",
+    // images: ["https://vickportfolio.vercel.app/images/seo/about-og-image.png"],
   },
   alternates: {
-    canonical: "https://kinhdev.id.vn/about",
+    canonical: "https://vickportfolio.vercel.app/about",
   },
 }
 
